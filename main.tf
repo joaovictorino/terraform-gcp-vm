@@ -46,7 +46,6 @@ resource "google_compute_firewall" "firewall-aula" {
 resource "google_compute_instance" "vm-aula" {
   name         = "vm-aula"
   machine_type = "f1-micro"
-  tags         = ["allow-ssh"]
 
   metadata = {
     ssh-keys = "ubuntu:${file("id_rsa.pub")}"
@@ -65,6 +64,7 @@ resource "google_compute_instance" "vm-aula" {
       nat_ip = google_compute_address.ip-aula.address
     }
   }
+  tags = ["aula"]
 }
 
 output "public_ip" {

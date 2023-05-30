@@ -49,12 +49,12 @@ resource "google_compute_instance" "vm-aula" {
   tags         = ["allow-ssh"]
 
   metadata = {
-    ssh-keys = "debian:${file("id_rsa.pub")}"
+    ssh-keys = "ubuntu:${file("id_rsa.pub")}"
   }
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-11"
+      image = "ubuntu-os-cloud/ubuntu-2204-lts"
     }
   }
 

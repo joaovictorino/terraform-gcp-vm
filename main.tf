@@ -64,7 +64,7 @@ resource "google_compute_instance" "vm-aula" {
       nat_ip = google_compute_address.ip-aula.address
     }
   }
-  tags = ["aula"]
+  tags =  ["allow-ssh"]
 }
 
 output "public_ip" {

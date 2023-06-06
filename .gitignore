@@ -1,8 +1,4 @@
-.terraform.lock.hcl
 terraform.tfstate.backup
 terraform.tfstate
 .terraform/*
-.terraform.tfstate.lock.info
-terraform.tfvars
 id_rsa*
-mysql/.terraform/*
